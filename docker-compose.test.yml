@@ -10,7 +10,7 @@ services:
         volumes:
             - ./healthchecks:/healthchecks
         healthchecks:
-            test:/healthchecks/postgres-healthchecks
+            test: /healthchecks/postgres-healthchecks
             interval: "5s"
     sut:
         image: "${TESTING_IMAGE}"
