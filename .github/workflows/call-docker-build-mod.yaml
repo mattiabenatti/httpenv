@@ -50,13 +50,13 @@ jobs:
         with:
           images: mbenatti6/httpenv_try
           flavor: |
-                latest=false
+            latest=false
           tags: |
-                type=raw,value=04
-                type=raw,value=latest,enable=${{ endsWith(github.ref, github.event.repository.default_branch) }}
-                type=ref,event=pr
-                type=ref,event=branch
-                type=semver,pattern={{version}}
+            type=raw,value=04
+            type=raw,value=latest,enable=${{ endsWith(github.ref, github.event.repository.default_branch) }}
+            type=ref,event=pr
+            type=ref,event=branch
+            type=semver,pattern={{version}}
             
       - name: Find comment for image tags
         uses: peter-evans/find-comment@v1
